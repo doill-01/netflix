@@ -13,7 +13,12 @@ const MovieDetail = ({ item }) => {
     setMovieDetails(res.data);
 
   return (
-<div>dd</div>
+	<div className="product-large-img">
+	<img
+	  src={`https://image.tmdb.org/t/p/original//${movieDetails.poster_path}`}
+	  alt=""
+	/>
+	</div>
   );
 };
 }
