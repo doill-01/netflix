@@ -1,0 +1,49 @@
+body{
+	background-color: black !important;
+	color: white !important;
+}
+
+.nav-item{
+	color: white;
+	text-decoration: none;
+	margin-left: 50px;
+}
+
+.banner{
+	height: 600px;
+	display: flex;
+	align-items: center;
+}
+
+.banner::before{
+	position: absolute;
+	left:0;
+	width: 100%;
+	height: 600px;
+	content: '';
+	background: linear-gradient(to top, black, transparent);
+}
+
+.banner-info{
+	width: 40%;
+	margin-left: 30px;
+	z-index: 1;
+}
+
+.card{
+	width: 300px;
+	height: 200px;
+}
+
+.overlay{
+	opacity: 0; 
+	/* 투명도 */
+	background: rgba(43, 41, 41, 0.9);
+	width: 100%;
+	height: 100%;
+
+}
+
+.card:hover .overlay{
+	opacity: 1;
+}
