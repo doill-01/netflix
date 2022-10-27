@@ -1,18 +1,21 @@
 import React, { useState } from "react";
-// import { Container, Row, Col } from "react-bootstrap";
+import axios from "axios";
 
 //디테일페이지의 영화 설명란
 
 const MovieDetail = ({ item }) => {
   console.log("ddd", item);
+  const [movieDetails, setMovieDetails] = React.useState(null);
+  async function getMovieDetailsFromAPI(id) {
+    let API_key = process.env.REACT_APP_APIKEY;
+    let url = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_key}&language=en-US`;
+    let res = await axios.get(url);
+    setMovieDetails(res.data);
+
   return (
-    <div className="product-large-img">
-      <img
-        src={`https://image.tmdb.org/t/p/original//${item.poster_path}`}
-        alt=""
-      />
-    </div>
+<div>dd</div>
   );
 };
+}
 
 export default MovieDetail;
